@@ -14,7 +14,7 @@ def generate_readme(api_key, repo_content):
     )
 
     response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo-16k",
+        model="gpt-4o-mini",
         messages=[
             {"role": "system", "content": "You are a professional assistant skilled at generating README files from GitHub repository content."},
             {"role": "user", "content": formatted_prompt}
