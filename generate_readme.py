@@ -6,11 +6,11 @@ def generate_readme(api_key, repo_content):
     openai.api_key = api_key
 
     formatted_prompt = (
-        "Create a professional README.md for a GitHub repository. "
+        "Create a professional and detailed README.md for a GitHub repository. "
         "The README should be in the correct markdown format, including a Table of Contents, Introduction, Installation, Usage, Features, Contributing, License, and Contact sections. "
         "The content should reflect the following repository data:\n\n"
         f"{repo_content}\n\n"
-        "Make sure the README is clear, concise, and well-formatted."
+        "Make sure the README is clear for developers and users to understand and well-formatted."
     )
 
     response = openai.ChatCompletion.create(
