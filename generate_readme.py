@@ -18,8 +18,7 @@ def generate_readme(api_key, repo_content):
         messages=[
             {"role": "system", "content": "You are a professional assistant skilled at generating README files from GitHub repository content."},
             {"role": "user", "content": formatted_prompt}
-        ],
-        max_tokens=10000
+        ]
     )
 
     return response.choices[0].message['content'].strip()
